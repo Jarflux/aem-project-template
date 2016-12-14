@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>be.xploregroup</groupId>
+        <artifactId>component-library</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>component-library-core-package</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>content-package</packaging>
+    <name>component-library-core-package</name>
+    <description>Component Library Core Package</description>
+
+    <build>
+        <resources>
+            <!-- Resource filtering to include project version number in the page component -->
+            <resource>
+                <directory>META-INF/vault/definition</directory>
+                <targetPath>${project.build.directory}/vault-work/META-INF/vault/definition</targetPath>
+            </resource>
+            <resource>
+                <directory>jcr_root</directory>
+                <filtering>false</filtering>
+                <excludes>
+                    <exclude>**/.vlt</exclude>
+                    <exclude>**/.vltignore</exclude>
+                    <exclude>**/*.iml</exclude>
+                    <exclude>**/.classpath</exclude>
+                    <exclude>**/.project</exclude>
+                    <exclude>**/.DS_Store</exclude>
+                    <exclude>**/target/**</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>com.day.jcr.vault</groupId>
+                <artifactId>content-package-maven-plugin</artifactId>
+                <configuration>
+                    <verbose>true</verbose>
+                    <failOnError>true</failOnError>
+                    <failOnMissingEmbed>true</failOnMissingEmbed>
+                    <filterSource>${project.basedir}/META-INF/vault/filter.xml</filterSource>
+                    <embeddeds>
+                        <embedded>
+                            <groupId>be.xploregroup</groupId>
+                            <artifactId>component-library-core-bundle</artifactId>
+                            <target>/apps/component-library/install</target>
+                        </embedded>
+                    </embeddeds>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>be.xploregroup</groupId>
+            <artifactId>component-library-core-bundle</artifactId>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>Component Library</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.day.jcr.vault</groupId>
+                        <artifactId>content-package-maven-plugin</artifactId>
+                        <configuration>
+                            <verbose>true</verbose>
+                            <failOnError>true</failOnError>
+                            <failOnMissingEmbed>true</failOnMissingEmbed>
+                            <filterSource>${project.basedir}/META-INF/vault/filter.xml</filterSource>
+                            <name>${project.artifactId}</name>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
