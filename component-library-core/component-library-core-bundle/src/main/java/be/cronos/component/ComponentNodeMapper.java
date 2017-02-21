@@ -1,6 +1,6 @@
-package be.xploregroup.component;
+package be.cronos.component;
 
-import be.xploregroup.core.mapper.NodeMapper;
+import be.cronos.core.mapper.NodeMapper;
 
 import javax.jcr.Node;
 import javax.jcr.Property;

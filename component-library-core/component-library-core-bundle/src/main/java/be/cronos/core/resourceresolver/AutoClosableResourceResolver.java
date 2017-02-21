@@ -1,4 +1,4 @@
-package be.xploregroup.core.resourceresolver;
+package be.cronos.core.resourceresolver;
 
 import org.apache.sling.api.resource.LoginException;
 import org.apache.sling.api.resource.PersistenceException;

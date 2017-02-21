@@ -1,4 +1,4 @@
-package be.xploregroup.component;
+package be.cronos.component;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.apache.felix.scr.annotations.*;

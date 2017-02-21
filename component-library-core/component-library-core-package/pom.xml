@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>be.xploregroup</groupId>
-        <artifactId>component-library</artifactId>
+        <groupId>be.cronos</groupId>
+        <artifactId>component-library-core</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -47,7 +47,7 @@
                     <filterSource>${project.basedir}/META-INF/vault/filter.xml</filterSource>
                     <embeddeds>
                         <embedded>
-                            <groupId>be.xploregroup</groupId>
+                            <groupId>be.cronos</groupId>
                             <artifactId>component-library-core-bundle</artifactId>
                             <target>/apps/component-library/install</target>
                         </embedded>
@@ -66,7 +66,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>be.xploregroup</groupId>
+            <groupId>be.cronos</groupId>
             <artifactId>component-library-core-bundle</artifactId>
         </dependency>
     </dependencies>

@@ -1,4 +1,4 @@
-package be.xploregroup.component;
+package be.cronos.component;
 
 /**
  * Developer: Ben Oeyen

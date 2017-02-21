@@ -1,4 +1,4 @@
-package be.xploregroup.osgi;
+package be.cronos.osgi;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

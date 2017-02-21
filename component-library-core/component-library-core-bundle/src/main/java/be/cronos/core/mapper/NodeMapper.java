@@ -1,4 +1,4 @@
-package be.xploregroup.core.mapper;
+package be.cronos.core.mapper;
 
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;

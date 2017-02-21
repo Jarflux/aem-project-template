@@ -1,8 +1,8 @@
-package be.xploregroup.component;
+package be.cronos.component;
 
-import be.xploregroup.constants.BundleConstants;
-import be.xploregroup.core.resourceresolver.AutoClosableResourceResolver;
-import be.xploregroup.core.resourceresolver.AutoClosableResourceResolverFactory;
+import be.cronos.constants.BundleConstants;
+import be.cronos.core.resourceresolver.AutoClosableResourceResolver;
+import be.cronos.core.resourceresolver.AutoClosableResourceResolverFactory;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.apache.felix.scr.annotations.Properties;
 import org.apache.felix.scr.annotations.Property;

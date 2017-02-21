@@ -1,4 +1,4 @@
-package be.xploregroup.constants;
+package be.cronos.constants;
 
 /**
  * Developer: Ben Oeyen
@@ -7,7 +7,7 @@ package be.xploregroup.constants;
 
 public class BundleConstants {
 
-    public static final String COMPONENT_LIBRARY_NODE_TYPE = "granite:Component";
+    public static final String COMPONENT_LIBRARY_NODE_TYPE = "cq:Component";
     public static final String SERVICE_VENDOR = "Xplore Group";
 
     private BundleConstants() {

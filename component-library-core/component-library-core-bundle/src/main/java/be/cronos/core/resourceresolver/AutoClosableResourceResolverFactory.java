@@ -1,4 +1,4 @@
-package be.xploregroup.core.resourceresolver;
+package be.cronos.core.resourceresolver;
 
 import org.apache.felix.scr.annotations.*;
 import org.apache.sling.api.resource.LoginException;

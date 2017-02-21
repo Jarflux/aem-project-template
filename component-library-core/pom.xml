@@ -2,8 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <groupId>be.xploregroup</groupId>
+        <groupId>be.cronos</groupId>
         <artifactId>component-library</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -15,8 +16,8 @@
     <description>Component Library Core</description>
 
     <modules>
-        <module>ccomponent-library-core-package</module>
         <module>component-library-core-bundle</module>
+        <module>component-library-core-package</module>
     </modules>
 
     <build>
@@ -25,7 +26,7 @@
                 <groupId>com.day.jcr.vault</groupId>
                 <artifactId>maven-vault-plugin</artifactId>
                 <configuration>
-                    <group>com.asadventure</group>
+                    <group>be.cronos</group>
                 </configuration>
             </plugin>
             <plugin>

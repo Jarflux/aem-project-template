@@ -1,6 +1,6 @@
-package be.xploregroup.component;
+package be.cronos.component;
 
-import be.xploregroup.constants.BundleConstants;
+import be.cronos.constants.BundleConstants;
 import org.apache.felix.scr.annotations.Properties;
 import org.apache.felix.scr.annotations.Property;
 import org.apache.felix.scr.annotations.Reference;
